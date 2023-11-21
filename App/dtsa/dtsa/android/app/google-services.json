@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "179427194852",
+    "project_id": "dtsa-project",
+    "storage_bucket": "dtsa-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179427194852:android:bc2e289535ca401bc779f1",
+        "android_client_info": {
+          "package_name": "com.apptechnix.dtsa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKO9-B9axoigKvl8fTwOXQqAW5ogGHOGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
