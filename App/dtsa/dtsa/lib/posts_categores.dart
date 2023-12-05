@@ -91,7 +91,7 @@ class _PostsState extends State<Posts> {
 
   @override
   Widget build(BuildContext context) {
-    print("posts email from login: $email");
+
     return Scaffold(
       drawer: const SideBar(),
       body: SingleChildScrollView(
@@ -442,7 +442,7 @@ class _PostsState extends State<Posts> {
                                   '${SettingsAPI.apiUrl}/uploads/profiles/${article.image}',
                                   width: double.infinity,
                                   height:
-                                      MediaQuery.of(context).size.height * 0.1,
+                                  MediaQuery.of(context).size.height * 0.1,
                                   fit: BoxFit.cover,
                                 ),
                                 Align(
@@ -582,7 +582,7 @@ class _PostsState extends State<Posts> {
   }
 
   Future<void> addFavourites(int articleId) async {
-    String email = FirebaseAuth.instance.currentUser!.email!;
+
     print("Article id $articleId");
     try {
       String apiUrl = "${SettingsAPI.apiUrl}/api/add-favorites";
@@ -620,7 +620,7 @@ class _PostsState extends State<Posts> {
   }
 
   Future<bool> isLiked(int articleid) async {
-    String email = FirebaseAuth.instance.currentUser!.email!;
+
     String apiUrl = "${SettingsAPI.apiUrl}/api/likes/$email";
     try {
       var response = await http.get(Uri.parse(apiUrl));
@@ -652,7 +652,7 @@ class _PostsState extends State<Posts> {
   }
 
   Future<bool> isFavourite(int articleid) async {
-    String email = FirebaseAuth.instance.currentUser!.email!;
+
 
     String apiUrl = "${SettingsAPI.apiUrl}/api/favorites/$email";
     try {
@@ -667,18 +667,19 @@ class _PostsState extends State<Posts> {
           []; // Create a new list to store the contacts
       for (var articlesData in jsonResponse) {
         int idarticles = articlesData["idarticles"];
-        String heading = articlesData["heading"];
+        String heading = articlesData["heading"]  ?? "empty";
         int division_id = articlesData["division_id"];
         int department_id = articlesData["department_id"];
-        String details = articlesData["details"];
-        String author = articlesData["author"];
+        String details = articlesData["details"]  ?? "empty";
+        String author = articlesData["author"]  ?? "empty";
         int category_id = articlesData["category_id"];
-        String date = articlesData["date"];
-        int likes = articlesData["likes"];
-        String image = articlesData["image"];
+        String date = articlesData["date"]  ?? "empty";
+        int likes = articlesData["aurthor_id"];
+        String image = articlesData["image"]  ?? "empty";
+        String profile_pic = articlesData["profile_pic"]  ?? "empty";
 
         Articles article = Articles(idarticles, heading, division_id,
-            department_id, details, author, category_id, date, likes, image);
+            department_id, details, author, category_id, date, likes, image,profile_pic);
 
         if ((article.idarticles == articleid)) {
           print("Is favourite: True");
@@ -695,7 +696,7 @@ class _PostsState extends State<Posts> {
   }
 
   Future<List<int>> checkFavourite() async {
-    String email = FirebaseAuth.instance.currentUser!.email!;
+
     String apiUrl = "${SettingsAPI.apiUrl}/api/favorites/$email";
     List<int> list = []; // Create a new list to store the articles
     try {
@@ -784,10 +785,10 @@ class _PostsState extends State<Posts> {
           firstCategory; // Variable to store the first matching category
 
       for (var categoryData in jsonResponse) {
-        int department_category_id = categoryData["Department_Category_ID"];
-        String name = categoryData["Name"];
-        int division_id = categoryData["Division_ID"];
-        int department_id = categoryData["Department_ID"];
+        int department_category_id = categoryData["Department_Category_ID"] ?? -1;
+        String name = categoryData["Name"] ?? "empty";
+        int division_id = categoryData["Division_ID"] ?? -1;
+        int department_id = categoryData["Department_ID"] ?? -1;
 
         Categories category = Categories(
           department_category_id,
@@ -828,20 +829,20 @@ class _PostsState extends State<Posts> {
               });
             });
 
-            getTopArticles(ActiveDepartment, ActiveCategory).then((articles) {
+            getTopArticles(firstCategory!.department_id, firstCategory!.department_category_id).then((articles) {
               print("department from bottom nav: $userGroup");
               setState(() {
                 topArticlesList = articles;
               });
             });
 
-            getArticles(ActiveDepartment, ActiveCategory).then((articles) {
+            getArticles(firstCategory!.department_id, firstCategory!.department_category_id).then((articles) {
               setState(() {
                 articlesList = articles;
               });
             });
 
-            // Initialize unread message counts for each group here
+            // N Initialize unread message counts for each group here
             for (var group in departmentList) {
               countUnreadMessages(group.Name).then((count) {
                 setState(() {
@@ -882,10 +883,10 @@ class _PostsState extends State<Posts> {
 
       for (var categoryData in jsonResponse) {
         int department_category_id =
-            categoryData["Department_Category_ID"]; //change
-        String name = categoryData["Name"];
-        int division_id = categoryData["Division_ID"];
-        int department_id = categoryData["Department_ID"];
+            categoryData["Department_Category_ID"] ?? -1; //change
+        String name = categoryData["Name"] ?? "empty";
+        int division_id = categoryData["Division_ID"] ?? -1;
+        int department_id = categoryData["Department_ID"] ?? -1;
 
         Categories category = Categories(
           department_category_id,
@@ -974,12 +975,12 @@ class _PostsState extends State<Posts> {
           []; // Create a new list to store the contacts
 
       for (var categoryData in jsonResponse) {
-        int departmentId = categoryData["Department_ID"]; //change
-        String name = categoryData["Name"];
-        int division_id = categoryData["Division_Division_ID"];
-        String location = categoryData["Location"];
-        int iduser_departments = categoryData["Department_ID"];
-        String email = categoryData["user_email"];
+        int departmentId = categoryData["Department_ID"] ?? -1; //change
+        String name = categoryData["Name"] ?? "empty";
+        int division_id = categoryData["Division_Division_ID"]  ?? -1;
+        String location = categoryData["Location"] ?? "empty";
+        int iduser_departments = categoryData["Department_ID"] ?? -1;
+        String email = categoryData["user_email"] ?? "empty";
 
         Departments departments = Departments(departmentId, name, division_id,
             location, iduser_departments, email);
@@ -1032,12 +1033,12 @@ class _PostsState extends State<Posts> {
           []; // Create a new list to store the contacts
 
       for (var categoryData in jsonResponse) {
-        int departmentId = categoryData["Department_ID"]; //change
-        String name = categoryData["Name"];
-        int division_id = categoryData["Division_Division_ID"];
-        String location = categoryData["Location"];
-        int iduser_departments = categoryData["Department_ID"];
-        String email = categoryData["user_email"];
+        int departmentId = categoryData["Department_ID"] ?? -1; //change
+        String name = categoryData["Name"] ?? "empty";
+        int division_id = categoryData["Division_Division_ID"] ?? -1;
+        String location = categoryData["Location"] ?? "empty";
+        int iduser_departments = categoryData["Department_ID"] ?? -1;
+        String email = categoryData["user_email"] ?? "empty";
 
         Departments departments = Departments(departmentId, name, division_id,
             location, iduser_departments, email);
@@ -1063,8 +1064,9 @@ class _PostsState extends State<Posts> {
   }
 
   Future<List<Articles>> getArticles(int depId, int catId) async {
-    String apiUrl =
-        "${SettingsAPI.apiUrl}/api/department-cat-article/$depId/category/$catId/articles";
+    print("===========get aricles functiom=====================");
+    print("dep id: $depId cat id: $catId");
+    String apiUrl = "${SettingsAPI.apiUrl}/api/department-cat-article/$depId/category/$catId/articles";
     try {
       var response = await http.get(Uri.parse(apiUrl));
       final jsonResponse = jsonDecode(response.body);
@@ -1073,23 +1075,26 @@ class _PostsState extends State<Posts> {
         print('json response: $jsonResponse');
       }
 
+
+
       List<Articles> articlesList =
           []; // Create a new list to store the contacts
 
       for (var articlesData in jsonResponse) {
-        int idarticles = articlesData["idarticles"]; //change
-        String heading = articlesData["heading"];
-        int division_id = articlesData["division_id"];
-        int department_id = articlesData["department_id"];
-        String details = articlesData["details"];
-        String author = articlesData["author"];
-        int category_id = articlesData["category_id"];
-        String date = articlesData["date"];
-        int likes = articlesData["likes"];
-        String image = articlesData["image"];
+        int idarticles = articlesData["idarticles"] ?? -1; //change
+        String heading = articlesData["heading"]  ?? "empty";
+        int division_id = articlesData["division_id"] ?? -1;
+        int department_id = articlesData["department_id"] ?? -1;
+        String details = articlesData["details"]  ?? "empty";
+        String author = articlesData["author"]  ?? "empty";
+        int category_id = articlesData["category_id"] ?? -1;
+        String date = articlesData["date"]  ?? "empty";
+        int likes = articlesData["aurthor_id"] ?? -1;
+        String image = articlesData["image"]  ?? "empty";
+        String profile_pic = articlesData["profile_pic"]  ?? "empty";
 
         Articles article = Articles(idarticles, heading, division_id,
-            department_id, details, author, category_id, date, likes, image);
+            department_id, details, author, category_id, date, likes, image,profile_pic);
         if (kDebugMode) {
           print('article id: ${article.idarticles}');
         }
@@ -1101,13 +1106,17 @@ class _PostsState extends State<Posts> {
             await getDepartmentNameById(article.department_id);
         print(
             'Posts Department from db from get articles function:${retrievedName.toString()} ');
-        if ((retrievedName != null && await retrievedName == userGroup)) {
-          articlesList.add(article);
-          if (kDebugMode) {
-            print(
-                'Added article id from get articles function: ${article.idarticles}');
-          }
-        }
+        print("-------------adding article---------------------");
+        print(article);
+        articlesList.add(article);
+
+        // if ((retrievedName != null && await retrievedName == userGroup)) {
+        //   articlesList.add(article);
+        //   if (kDebugMode) {
+        //     print(
+        //         'Added article id from get articles function: ${article.idarticles}');
+        //   }
+        // }
       }
 
       return articlesList;
@@ -1134,19 +1143,20 @@ class _PostsState extends State<Posts> {
           []; // Create a new list to store the contacts
 
       for (var articlesData in jsonResponse) {
-        int idarticles = articlesData["idarticles"]; //change
-        String heading = articlesData["heading"];
-        int division_id = articlesData["division_id"];
-        int department_id = articlesData["department_id"];
-        String details = articlesData["details"];
-        String author = articlesData["author"];
-        int category_id = articlesData["category_id"];
-        String date = articlesData["date"];
-        int likes = articlesData["likes"];
-        String image = articlesData["image"];
+        int idarticles = articlesData["idarticles"] ?? -1 ; //change
+        String heading = articlesData["heading"] ?? "empty";
+        int division_id = articlesData["division_id"] ?? -1;
+        int department_id = articlesData["department_id"] ?? -1;
+        String details = articlesData["details"] ?? "empty";
+        String author = articlesData["author"] ?? "empty";
+        int category_id = articlesData["category_id"] ?? -1;
+        String date = articlesData["date"] ?? "empty";
+        int likes = articlesData["aurthor_id"] ?? -1;
+        String image = articlesData["image"] ?? "empty";
+        String profile_pic = articlesData["profile_pic"] ?? "empty";
 
         Articles article = Articles(idarticles, heading, division_id,
-            department_id, details, author, category_id, date, likes, image);
+            department_id, details, author, category_id, date, likes, image,profile_pic);
         if (kDebugMode) {
           print('article id: ${article.idarticles}');
         }
@@ -1191,7 +1201,7 @@ class _PostsState extends State<Posts> {
       }
 
       for (var articlesData in jsonResponse) {
-        String departmentName = articlesData['Name'];
+        String departmentName = articlesData['Name'] ?? "empty";
 
         if (kDebugMode) {
           print(
@@ -1211,7 +1221,7 @@ class _PostsState extends State<Posts> {
   }
 
   Future<void> deleteFavourites(int articleId) async {
-    String email = FirebaseAuth.instance.currentUser!.email!;
+
     try {
       String apiUrl = "${SettingsAPI.apiUrl}/api/delete-favorites";
       Map<String, dynamic> requestBody = {
@@ -1274,7 +1284,7 @@ class _PostsState extends State<Posts> {
 
   Future<void> fetchUserGroup() async {
     final String? group = await findUserGroup();
-    print("useer group: $group");
+    print("user group: $group");
     setState(() {
       userGroup = group!;
     });
@@ -1283,7 +1293,7 @@ class _PostsState extends State<Posts> {
   }
 
   Future<String> findUserGroup() async {
-    String email = FirebaseAuth.instance.currentUser!.email!;
+
     final QuerySnapshot querySnapshot =
         await FirebaseFirestore.instance.collection('Groups').get();
 
@@ -1342,7 +1352,7 @@ class _PostsState extends State<Posts> {
   }
 
   void getUser() async {
-    String email = FirebaseAuth.instance.currentUser!.email!;
+
     String apiUrl = "${SettingsAPI.apiUrl}/api/user-email/$email";
     try {
       var response = await http.get(Uri.parse(apiUrl));
@@ -1400,33 +1410,27 @@ class _PostsState extends State<Posts> {
   }
 
   Future<int> countUnreadMessages(String collection) async {
-    print(
-        '--------------------------------7777777777777777777--------------------------------------------------------------------');
-    print('Started counting');
+
     String email = FirebaseAuth.instance.currentUser!.email!;
     int count = 0;
 
     try {
-      print(
-          'outside for loop=========================================================');
+
 
       // Your existing code here
       final QuerySnapshot querySnapshot =
           await FirebaseFirestore.instance.collection(collection).get();
 
-      print("query: ${querySnapshot.size}");
-      print("docs: ${querySnapshot.docs}");
+
       int i = 0;
       for (final doc in querySnapshot.docs) {
         setState(() {
           i++;
         });
-        print("counter : $i");
-        print(
-            '----------------------------------------------------------------------------------------------------');
-        print('inside for loop');
+
+
         final List<dynamic> messages = doc.get('readBy');
-        print(messages.length);
+
         if (!messages.contains(email)) {
           print(
               '----------------------------------------------------------------------------------------------------');

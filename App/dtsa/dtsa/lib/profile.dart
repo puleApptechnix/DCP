@@ -123,7 +123,7 @@ class _ProfileState extends State<Profile> {
         String name = userData['user_name'] ?? 'null';
         String surname = userData['Surname'] ?? '';
         String designation = userData['Designation'] ?? 'null';
-        String location = userData['user_location'] ?? 'null';
+        String location = userData['location'] ?? 'null';
         String email = userData['Email'] ?? '';
         String contactNumber = userData['Contact_Number'] ?? 'null';
         int userType = userData['Type'] ?? '';

@@ -78,10 +78,11 @@ class _HomePageState extends State<HomePage> {
         int? department_id = articlesData["Department_ID"];
         String? details = articlesData["details"];
         String? author = articlesData["author"];
-        int? category_id = articlesData["category_id"];
+        int? categoryId = articlesData["category_id"];
         String? date = articlesData["date"];
-        int? likes = articlesData["likes"];
+        int? aurthorId = articlesData["aurthor_id"];
         String? image = articlesData["image"];
+        String? profile_pic = articlesData["profile_pic"];
 
         Articles article = Articles(
           idarticles ?? 0,
@@ -90,10 +91,13 @@ class _HomePageState extends State<HomePage> {
           department_id ?? 0,
           details ?? "null",
           author ?? "",
-          category_id ?? 0,
+          categoryId ?? 0,
           date ?? "null",
-          likes ?? 0,
+          aurthorId ?? 0,
           image ?? "",
+          profile_pic ?? ""
+
+
         );
 
 
@@ -101,6 +105,7 @@ class _HomePageState extends State<HomePage> {
         print('current department: $group');
         Future<String>? retrievedName = await getDepartmentNameById(article.department_id);
         print('Department from db:${retrievedName.toString()}');
+
 
 
           articlesList.add(article);
@@ -424,18 +429,19 @@ void checkLikes(int user_id,int articleId ) async {
 
 
         int idarticles =articlesData["idarticles"] ;
-        String heading=articlesData["heading"] ;
+        String heading=articlesData["heading"] ?? "empty";
         int division_id=articlesData["division_id"];
         int department_id=articlesData["department_id"];
-        String details=articlesData["details"];
-        String author=articlesData["author"];
+        String details=articlesData["details"] ?? "empty";
+        String author=articlesData["author"]  ?? "empty";
         int category_id=articlesData["category_id"];
-        String date=articlesData["date"];
-        int likes=articlesData["likes"];
-        String image=articlesData["image"];
+        String date=articlesData["date"]  ?? "empty";
+        int likes=articlesData["aurthor_id"];
+        String image=articlesData["image"]  ?? "empty";
+        String profile_pic = articlesData["profile_pic"]  ?? "empty";
 
         Articles article = Articles(idarticles,heading,division_id,department_id,
-            details,author,category_id,date, likes,image);
+            details,author,category_id,date, likes,image,profile_pic);
 
 
         if((article.idarticles == articleid)) {
@@ -458,7 +464,9 @@ void checkLikes(int user_id,int articleId ) async {
   }
 
   Future<void> deleteFavourites( int articleId) async {
-    String email = FirebaseAuth.instance.currentUser!.email!;
+   print("favourites function");
+   print("email: $email");
+   print("article id :$articleId");
     try {
       String apiUrl = "${SettingsAPI.apiUrl}/api/delete-favorites";
       Map<String, dynamic> requestBody = {
@@ -496,7 +504,7 @@ void checkLikes(int user_id,int articleId ) async {
 
 
   Future<List<int>> checkFavourite() async {
-    String email = FirebaseAuth.instance.currentUser!.email!;
+
     String apiUrl = "${SettingsAPI.apiUrl}/api/favorites/$email";
     List<int> list = []; // Create a new list to store the articles
     try {
@@ -553,11 +561,12 @@ void checkLikes(int user_id,int articleId ) async {
         String author=articlesData["author"];
         int category_id=articlesData["category_id"];
         String date=articlesData["date"];
-        int likes=articlesData["likes"];
+        int likes=articlesData["aurthor_id"];
         String image=articlesData["image"];
+        String profile_pic = articlesData["profile_pic"];
 
         Articles article = Articles(idarticles,heading,division_id,department_id,
-            details,author,category_id,date, likes,image);
+            details,author,category_id,date, likes,image,profile_pic);
 
 
         if((article.idarticles == articleid)) {
@@ -726,11 +735,13 @@ if(favorites.contains(article)){
         String author=articlesData["author"];
         int category_id=articlesData["category_id"];
         String date=articlesData["date"];
-        int likes=articlesData["likes"];
+        int likes=articlesData["aurthor_id"];
         String image=articlesData["image"];
+        String profile_pic =articlesData["profile_pic"];
+
 
         Articles article = Articles(idarticles,heading,division_id,department_id,
-            details,author,category_id,date, likes,image);
+            details,author,category_id,date, likes,image,profile_pic);
 
 
 
@@ -757,11 +768,7 @@ void initApp(){
     });
   });
   //   addFavourites(1,45);
-  getLatestArticle("General").then((article) {
-    setState(() {
-      latestArticle = article;
-    });
-  });
+
 
   getArticles().then((articles) {
     setState(() {

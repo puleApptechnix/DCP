@@ -121,7 +121,7 @@ class _NotificationsState extends State<Notifications> {
                                   child: Text(
                                     (notification.message ?? 'default').length <= 30
                                         ? notification.message ?? 'default'
-                                        : '${notification.message.substring(0, 27)}...',
+                                        : '${notification.message.substring(0, 25)}...',
                                     style: const TextStyle(color: Colors.grey),
                                   ),
                                 ),
@@ -168,12 +168,15 @@ class _NotificationsState extends State<Notifications> {
         String message = contactData['message'];
         int idnotifications = contactData['idnotifications'];
         String time = contactData['time'];
-        int is_read = contactData['is_read'];
-        int division_id = contactData['division_id'];
-        int department_id = contactData['department_id'];
+        int isRead = contactData['is_read'];
+        int divisionId = contactData['division_id'];
+        int departmentId = contactData['department_id'];
 
         NotificationsModel contact = NotificationsModel(idnotifications, title,
-            message, time, is_read, division_id, department_id);
+            message, time, isRead, divisionId, departmentId);
+
+
+
         contactsList.add(contact);
 
         if (kDebugMode) {

@@ -1,0 +1,551 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.apptechnix.dtsa"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:3:5-66
+11-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:3:22-64
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:4:5-80
+12-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:4:22-77
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:5:5-81
+13-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:5:22-78
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:6:5-65
+14-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:6:22-62
+15    <uses-permission android:name="android.permission.WAKE_LOCK" />
+15-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:10:5-68
+15-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:10:22-65
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissions options for the `notification` group -->
+16-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:11:5-79
+16-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:11:22-76
+17    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+17-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:13:5-77
+17-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:13:22-74
+18    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+18-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-81
+18-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:9:22-78
+19    <uses-permission android:name="android.permission.VIBRATE" />
+19-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:10:5-66
+19-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:10:22-63
+20    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+20-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:11:5-81
+20-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:11:22-78
+21    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+21-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:12:5-79
+21-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:12:22-76
+22    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+22-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\39d9b5c48419e0c94f5aa1b980350a6f\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:26:5-82
+22-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\39d9b5c48419e0c94f5aa1b980350a6f\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:26:22-79
+23
+24    <permission
+24-->[androidx.core:core:1.10.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\e73600b7204754fa6eaab4c4f4dd2179\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+25        android:name="com.apptechnix.dtsa.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+25-->[androidx.core:core:1.10.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\e73600b7204754fa6eaab4c4f4dd2179\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+26        android:protectionLevel="signature" />
+26-->[androidx.core:core:1.10.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\e73600b7204754fa6eaab4c4f4dd2179\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+27
+28    <uses-permission android:name="com.apptechnix.dtsa.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+28-->[androidx.core:core:1.10.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\e73600b7204754fa6eaab4c4f4dd2179\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+28-->[androidx.core:core:1.10.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\e73600b7204754fa6eaab4c4f4dd2179\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+29
+30    <application
+31        android:name="android.app.Application"
+31-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:9:9-42
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.10.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\e73600b7204754fa6eaab4c4f4dd2179\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+33        android:icon="@mipmap/launcher_icon"
+33-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:10:9-45
+34        android:label="DCP" >
+34-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:8:9-28
+35        <activity
+35-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:11:9-36:20
+36            android:name="com.apptechnix.dtsa.MainActivity"
+36-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:12:13-41
+37            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+37-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:16:13-163
+38            android:exported="true"
+38-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:13:13-36
+39            android:hardwareAccelerated="true"
+39-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:17:13-47
+40            android:launchMode="singleTop"
+40-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:14:13-43
+41            android:theme="@style/LaunchTheme"
+41-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:15:13-47
+42            android:windowSoftInputMode="adjustResize" >
+42-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:18:13-55
+43
+44            <!--
+45                 Specifies an Android theme to apply to this Activity as soon as
+46                 the Android process has started. This theme is visible to the user
+47                 while the Flutter UI initializes. After that, this theme continues
+48                 to determine the Window background behind the Flutter UI.
+49            -->
+50            <meta-data
+50-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:23:13-26:17
+51                android:name="io.flutter.embedding.android.NormalTheme"
+51-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:24:15-70
+52                android:resource="@style/NormalTheme" />
+52-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:25:15-52
+53            <meta-data
+53-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:28:13-30:42
+54                android:name="com.google.firebase.messaging.default_notification_channel_id"
+54-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:29:17-93
+55                android:value="123456" />
+55-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:30:17-39
+56
+57            <intent-filter>
+57-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:32:13-35:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:33:17-68
+58-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:33:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:34:17-76
+60-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:34:27-74
+61            </intent-filter>
+62        </activity>
+63        <!--
+64             Don't delete the meta-data below.
+65             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+66        -->
+67        <meta-data
+67-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:39:9-41:33
+68            android:name="flutterEmbedding"
+68-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:40:13-44
+69            android:value="2" />
+69-->C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\android\app\src\main\AndroidManifest.xml:41:13-30
+70
+71        <service
+71-->[:cloud_firestore] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\cloud_firestore\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-14:19
+72            android:name="com.google.firebase.components.ComponentDiscoveryService"
+72-->[:cloud_firestore] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\cloud_firestore\intermediates\merged_manifest\release\AndroidManifest.xml:10:18-89
+73            android:directBootAware="true"
+73-->[com.google.firebase:firebase-common:20.3.3] C:\Users\Apptechnix\.gradle\caches\transforms-3\59e1e372748fafe695505fff588c45a6\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:34:13-43
+74            android:exported="false" >
+74-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:68:13-37
+75            <meta-data
+75-->[:cloud_firestore] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\cloud_firestore\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-13:85
+76                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+76-->[:cloud_firestore] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\cloud_firestore\intermediates\merged_manifest\release\AndroidManifest.xml:12:17-134
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[:cloud_firestore] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\cloud_firestore\intermediates\merged_manifest\release\AndroidManifest.xml:13:17-82
+78            <meta-data
+78-->[:firebase_auth] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_auth\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-13:85
+79                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+79-->[:firebase_auth] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_auth\intermediates\merged_manifest\release\AndroidManifest.xml:12:17-124
+80                android:value="com.google.firebase.components.ComponentRegistrar" />
+80-->[:firebase_auth] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_auth\intermediates\merged_manifest\release\AndroidManifest.xml:13:17-82
+81            <meta-data
+81-->[:firebase_storage] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_storage\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-13:85
+82                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
+82-->[:firebase_storage] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_storage\intermediates\merged_manifest\release\AndroidManifest.xml:12:17-126
+83                android:value="com.google.firebase.components.ComponentRegistrar" />
+83-->[:firebase_storage] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_storage\intermediates\merged_manifest\release\AndroidManifest.xml:13:17-82
+84            <meta-data
+84-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:38:13-40:85
+85                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+85-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:39:17-128
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:40:17-82
+87            <meta-data
+87-->[:firebase_core] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_core\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-13:85
+88                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+88-->[:firebase_core] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_core\intermediates\merged_manifest\release\AndroidManifest.xml:12:17-124
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[:firebase_core] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_core\intermediates\merged_manifest\release\AndroidManifest.xml:13:17-82
+90            <meta-data
+90-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:69:13-71:85
+91                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+91-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:70:17-109
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:71:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\39d9b5c48419e0c94f5aa1b980350a6f\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:32:13-34:85
+94                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+94-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\39d9b5c48419e0c94f5aa1b980350a6f\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:33:17-96
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\39d9b5c48419e0c94f5aa1b980350a6f\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:34:17-82
+96            <meta-data
+96-->[com.google.firebase:firebase-firestore:24.7.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\9f0ce934075a81ea2b30b87add89873d\transformed\jetified-firebase-firestore-24.7.1\AndroidManifest.xml:17:13-19:85
+97                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+97-->[com.google.firebase:firebase-firestore:24.7.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\9f0ce934075a81ea2b30b87add89873d\transformed\jetified-firebase-firestore-24.7.1\AndroidManifest.xml:18:17-111
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.firebase:firebase-firestore:24.7.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\9f0ce934075a81ea2b30b87add89873d\transformed\jetified-firebase-firestore-24.7.1\AndroidManifest.xml:19:17-82
+99            <meta-data
+99-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\f869ab0d4ae0fbf8a5351405fcfa633e\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:53:13-55:85
+100                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+100-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\f869ab0d4ae0fbf8a5351405fcfa633e\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:54:17-119
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\f869ab0d4ae0fbf8a5351405fcfa633e\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:55:17-82
+102            <meta-data
+102-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\d281c50a916fec2c37f937511e5650cd\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:32:13-34:85
+103                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+103-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\d281c50a916fec2c37f937511e5650cd\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:33:17-107
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\d281c50a916fec2c37f937511e5650cd\transformed\jetified-firebase-storage-20.2.1\AndroidManifest.xml:34:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-installations:17.1.4] C:\Users\Apptechnix\.gradle\caches\transforms-3\ba6aab4b287f8020360df35c59b7ee3e\transformed\jetified-firebase-installations-17.1.4\AndroidManifest.xml:15:13-17:85
+106                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+106-->[com.google.firebase:firebase-installations:17.1.4] C:\Users\Apptechnix\.gradle\caches\transforms-3\ba6aab4b287f8020360df35c59b7ee3e\transformed\jetified-firebase-installations-17.1.4\AndroidManifest.xml:16:17-127
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-installations:17.1.4] C:\Users\Apptechnix\.gradle\caches\transforms-3\ba6aab4b287f8020360df35c59b7ee3e\transformed\jetified-firebase-installations-17.1.4\AndroidManifest.xml:17:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Apptechnix\.gradle\caches\transforms-3\41dfe98397e4b9f5ee875d10e366947c\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+109                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+109-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Apptechnix\.gradle\caches\transforms-3\41dfe98397e4b9f5ee875d10e366947c\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Apptechnix\.gradle\caches\transforms-3\41dfe98397e4b9f5ee875d10e366947c\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+111        </service>
+112        <service
+112-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:16:9-19:72
+113            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+113-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:17:13-107
+114            android:exported="false"
+114-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:18:13-37
+115            android:permission="android.permission.BIND_JOB_SERVICE" />
+115-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:19:13-69
+116        <service
+116-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:20:9-26:19
+117            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+117-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:21:13-97
+118            android:exported="false" >
+118-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-37
+119            <intent-filter>
+119-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:23:13-25:29
+120                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+120-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:24:17-78
+120-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:24:25-75
+121            </intent-filter>
+122        </service>
+123
+124        <receiver
+124-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:28:9-35:20
+125            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+125-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:29:13-98
+126            android:exported="true"
+126-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:30:13-36
+127            android:permission="com.google.android.c2dm.permission.SEND" >
+127-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:31:13-73
+128            <intent-filter>
+128-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:32:13-34:29
+129                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+129-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:33:17-81
+129-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:33:25-78
+130            </intent-filter>
+131        </receiver>
+132
+133        <provider
+133-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:43:9-47:38
+134            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+134-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:44:13-102
+135            android:authorities="com.apptechnix.dtsa.flutterfirebasemessaginginitprovider"
+135-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:45:13-88
+136            android:exported="false"
+136-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:46:13-37
+137            android:initOrder="99" />
+137-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:47:13-35
+138        <provider
+138-->[:image_picker_android] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-18:20
+139            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+139-->[:image_picker_android] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-82
+140            android:authorities="com.apptechnix.dtsa.flutter.image_provider"
+140-->[:image_picker_android] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-74
+141            android:exported="false"
+141-->[:image_picker_android] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-37
+142            android:grantUriPermissions="true" >
+142-->[:image_picker_android] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-47
+143            <meta-data
+143-->[:image_picker_android] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-17:75
+144                android:name="android.support.FILE_PROVIDER_PATHS"
+144-->[:image_picker_android] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:16:17-67
+145                android:resource="@xml/flutter_image_picker_file_paths" />
+145-->[:image_picker_android] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:17:17-72
+146        </provider>
+147
+148        <receiver
+148-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:16:9-18:40
+149            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
+149-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:17:13-91
+150            android:exported="false" />
+150-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:18:13-37
+151        <receiver
+151-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:19:9-21:40
+152            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+152-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:20:13-97
+153            android:exported="false" />
+153-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:21:13-37
+154        <receiver
+154-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:22:9-31:20
+155            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+155-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:23:13-101
+156            android:exported="false" >
+156-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:24:13-37
+157            <intent-filter>
+157-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:25:13-30:29
+158                <action android:name="android.intent.action.BOOT_COMPLETED" />
+158-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:26:17-79
+158-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:26:25-76
+159                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+159-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:27:17-84
+159-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:27:25-81
+160                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+160-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:28:17-82
+160-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:28:25-79
+161                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+161-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:29:17-82
+161-->[:flutter_local_notifications] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:29:25-79
+162            </intent-filter>
+163        </receiver>
+164
+165        <activity
+165-->[:url_launcher_android] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-13:74
+166            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+166-->[:url_launcher_android] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-74
+167            android:exported="false"
+167-->[:url_launcher_android] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-37
+168            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+168-->[:url_launcher_android] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-71
+169        <activity
+169-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:29:9-46:20
+170            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+170-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:30:13-80
+171            android:excludeFromRecents="true"
+171-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:31:13-46
+172            android:exported="true"
+172-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:32:13-36
+173            android:launchMode="singleTask"
+173-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:33:13-44
+174            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+174-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:34:13-72
+175            <intent-filter>
+175-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:35:13-45:29
+176                <action android:name="android.intent.action.VIEW" />
+176-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:36:17-69
+176-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:36:25-66
+177
+178                <category android:name="android.intent.category.DEFAULT" />
+178-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:38:17-76
+178-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:38:27-73
+179                <category android:name="android.intent.category.BROWSABLE" />
+179-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:39:17-78
+179-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:39:27-75
+180
+181                <data
+181-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:41:17-44:51
+182                    android:host="firebase.auth"
+182-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:42:21-49
+183                    android:path="/"
+183-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:43:21-37
+184                    android:scheme="genericidp" />
+184-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:44:21-48
+185            </intent-filter>
+186        </activity>
+187        <activity
+187-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:47:9-64:20
+188            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+188-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:48:13-79
+189            android:excludeFromRecents="true"
+189-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:49:13-46
+190            android:exported="true"
+190-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:50:13-36
+191            android:launchMode="singleTask"
+191-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:51:13-44
+192            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+192-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:52:13-72
+193            <intent-filter>
+193-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:53:13-63:29
+194                <action android:name="android.intent.action.VIEW" />
+194-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:36:17-69
+194-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:36:25-66
+195
+196                <category android:name="android.intent.category.DEFAULT" />
+196-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:38:17-76
+196-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:38:27-73
+197                <category android:name="android.intent.category.BROWSABLE" />
+197-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:39:17-78
+197-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:39:27-75
+198
+199                <data
+199-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:41:17-44:51
+200                    android:host="firebase.auth"
+200-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:42:21-49
+201                    android:path="/"
+201-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:43:21-37
+202                    android:scheme="recaptcha" />
+202-->[com.google.firebase:firebase-auth:22.1.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\1fe1bc35fcd6a90f9b5dc588f7e09133\transformed\jetified-firebase-auth-22.1.1\AndroidManifest.xml:44:21-48
+203            </intent-filter>
+204        </activity>
+205
+206        <receiver
+206-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\f869ab0d4ae0fbf8a5351405fcfa633e\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:29:9-36:20
+207            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+207-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\f869ab0d4ae0fbf8a5351405fcfa633e\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:30:13-78
+208            android:exported="true"
+208-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\f869ab0d4ae0fbf8a5351405fcfa633e\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:31:13-36
+209            android:permission="com.google.android.c2dm.permission.SEND" >
+209-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\f869ab0d4ae0fbf8a5351405fcfa633e\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:32:13-73
+210            <intent-filter>
+210-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:32:13-34:29
+211                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+211-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:33:17-81
+211-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:33:25-78
+212            </intent-filter>
+213        </receiver>
+214        <!--
+215             FirebaseMessagingService performs security checks at runtime,
+216             but set to not exported to explicitly avoid allowing another app to call it.
+217        -->
+218        <service
+218-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\f869ab0d4ae0fbf8a5351405fcfa633e\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:42:9-49:19
+219            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+219-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\f869ab0d4ae0fbf8a5351405fcfa633e\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:43:13-82
+220            android:directBootAware="true"
+220-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\f869ab0d4ae0fbf8a5351405fcfa633e\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:44:13-43
+221            android:exported="false" >
+221-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\f869ab0d4ae0fbf8a5351405fcfa633e\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:45:13-37
+222            <intent-filter android:priority="-500" >
+222-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:23:13-25:29
+223                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+223-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:24:17-78
+223-->[:firebase_messaging] C:\Users\Apptechnix\Documents\Apptechnix\DCP\DCP\App\dtsa\dtsa\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:24:25-75
+224            </intent-filter>
+225        </service>
+226
+227        <provider
+227-->[com.google.firebase:firebase-common:20.3.3] C:\Users\Apptechnix\.gradle\caches\transforms-3\59e1e372748fafe695505fff588c45a6\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:25:9-30:39
+228            android:name="com.google.firebase.provider.FirebaseInitProvider"
+228-->[com.google.firebase:firebase-common:20.3.3] C:\Users\Apptechnix\.gradle\caches\transforms-3\59e1e372748fafe695505fff588c45a6\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:26:13-77
+229            android:authorities="com.apptechnix.dtsa.firebaseinitprovider"
+229-->[com.google.firebase:firebase-common:20.3.3] C:\Users\Apptechnix\.gradle\caches\transforms-3\59e1e372748fafe695505fff588c45a6\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:27:13-72
+230            android:directBootAware="true"
+230-->[com.google.firebase:firebase-common:20.3.3] C:\Users\Apptechnix\.gradle\caches\transforms-3\59e1e372748fafe695505fff588c45a6\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:28:13-43
+231            android:exported="false"
+231-->[com.google.firebase:firebase-common:20.3.3] C:\Users\Apptechnix\.gradle\caches\transforms-3\59e1e372748fafe695505fff588c45a6\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:29:13-37
+232            android:initOrder="100" />
+232-->[com.google.firebase:firebase-common:20.3.3] C:\Users\Apptechnix\.gradle\caches\transforms-3\59e1e372748fafe695505fff588c45a6\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:30:13-36
+233
+234        <activity
+234-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\8f31701e663a8c1514b353cc4d7239a2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+235            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+235-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\8f31701e663a8c1514b353cc4d7239a2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+236            android:exported="false"
+236-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\8f31701e663a8c1514b353cc4d7239a2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+237            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+237-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Apptechnix\.gradle\caches\transforms-3\8f31701e663a8c1514b353cc4d7239a2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+238
+239        <meta-data
+239-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ad3fb7e0e58165c0e3c87f8f0d79631f\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+240            android:name="com.google.android.gms.version"
+240-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ad3fb7e0e58165c0e3c87f8f0d79631f\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+241            android:value="@integer/google_play_services_version" />
+241-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ad3fb7e0e58165c0e3c87f8f0d79631f\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+242
+243        <uses-library
+243-->[androidx.window:window:1.0.0-beta04] C:\Users\Apptechnix\.gradle\caches\transforms-3\40ff8c014bc3b03149787e1d45a42dea\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+244            android:name="androidx.window.extensions"
+244-->[androidx.window:window:1.0.0-beta04] C:\Users\Apptechnix\.gradle\caches\transforms-3\40ff8c014bc3b03149787e1d45a42dea\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+245            android:required="false" />
+245-->[androidx.window:window:1.0.0-beta04] C:\Users\Apptechnix\.gradle\caches\transforms-3\40ff8c014bc3b03149787e1d45a42dea\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+246        <uses-library
+246-->[androidx.window:window:1.0.0-beta04] C:\Users\Apptechnix\.gradle\caches\transforms-3\40ff8c014bc3b03149787e1d45a42dea\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+247            android:name="androidx.window.sidecar"
+247-->[androidx.window:window:1.0.0-beta04] C:\Users\Apptechnix\.gradle\caches\transforms-3\40ff8c014bc3b03149787e1d45a42dea\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+248            android:required="false" />
+248-->[androidx.window:window:1.0.0-beta04] C:\Users\Apptechnix\.gradle\caches\transforms-3\40ff8c014bc3b03149787e1d45a42dea\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+249
+250        <provider
+250-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+251            android:name="androidx.startup.InitializationProvider"
+251-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:25:13-67
+252            android:authorities="com.apptechnix.dtsa.androidx-startup"
+252-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:26:13-68
+253            android:exported="false" >
+253-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:27:13-37
+254            <meta-data
+254-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+255                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+255-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+256                android:value="androidx.startup" />
+256-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+257        </provider>
+258
+259        <receiver
+259-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+260            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+260-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+261            android:directBootAware="false"
+261-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+262            android:enabled="true"
+262-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+263            android:exported="true"
+263-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+264            android:permission="android.permission.DUMP" >
+264-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+265            <intent-filter>
+265-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+266                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+266-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+266-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+267            </intent-filter>
+268            <intent-filter>
+268-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+269                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+269-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+269-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+270            </intent-filter>
+271            <intent-filter>
+271-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+272                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+272-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+272-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+273            </intent-filter>
+274            <intent-filter>
+274-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+275                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+275-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+275-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Apptechnix\.gradle\caches\transforms-3\ef4c45e08659a72755f147d134c0e2af\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+276            </intent-filter>
+277        </receiver>
+278
+279        <service
+279-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\3f8abbb60d5c4c3da088d9cf8719f09b\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+280            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+280-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\3f8abbb60d5c4c3da088d9cf8719f09b\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+281            android:exported="false" >
+281-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\3f8abbb60d5c4c3da088d9cf8719f09b\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+282            <meta-data
+282-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\3f8abbb60d5c4c3da088d9cf8719f09b\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+283                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+283-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\3f8abbb60d5c4c3da088d9cf8719f09b\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+284                android:value="cct" />
+284-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\3f8abbb60d5c4c3da088d9cf8719f09b\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+285        </service>
+286        <service
+286-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\832066d38c964edf87a4ceac992c0cb0\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+287            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+287-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\832066d38c964edf87a4ceac992c0cb0\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+288            android:exported="false"
+288-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\832066d38c964edf87a4ceac992c0cb0\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+289            android:permission="android.permission.BIND_JOB_SERVICE" >
+289-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\832066d38c964edf87a4ceac992c0cb0\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+290        </service>
+291
+292        <receiver
+292-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\832066d38c964edf87a4ceac992c0cb0\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+293            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+293-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\832066d38c964edf87a4ceac992c0cb0\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+294            android:exported="false" />
+294-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Apptechnix\.gradle\caches\transforms-3\832066d38c964edf87a4ceac992c0cb0\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+295    </application>
+296
+297</manifest>

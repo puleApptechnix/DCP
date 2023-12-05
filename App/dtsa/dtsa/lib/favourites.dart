@@ -60,11 +60,7 @@ class _FaouritesState extends State<Faourites> {
     });
 
 
-    getArticles().then((articles) {
-      setState(() {
-        articlesList = articles;
-      });
-    });
+
   }
 
   Future<void> getDeparment(String userEmail) async {
@@ -95,10 +91,18 @@ class _FaouritesState extends State<Faourites> {
         if (departments.Name != null) {
           setState(() {
             activeGroup = departments.Name;
-            group = departments.Name;
+
           });
 
-          return;
+          print("active department : $activeGroup");
+
+          getArticles().then((articles) {
+            setState(() {
+              articlesList = articles;
+            });
+          });
+
+
         }
       }
 
@@ -197,8 +201,10 @@ class _FaouritesState extends State<Faourites> {
   }
 
   Future<List<Articles>> getArticles() async {
-    String email = FirebaseAuth.instance.currentUser!.email!;
+    //String email = FirebaseAuth.instance.currentUser!.email!;
     String apiUrl = "${SettingsAPI.apiUrl}/api/favorites/$email";
+
+    print("email : $email");
     try {
       var response = await http.get(Uri.parse(apiUrl));
       final jsonResponse = jsonDecode(response.body);
@@ -206,20 +212,21 @@ class _FaouritesState extends State<Faourites> {
       if (kDebugMode) {
         print('json response: $jsonResponse.toString()');
       }
-
-      List<Articles> articlesList =
+      print("--------------for loop :  -----------------");
+      List<Articles> list=
       []; // Create a new list to store the contacts
       for (var articlesData in jsonResponse) {
-        int idarticles = articlesData["idarticles"];
-        String heading = articlesData["heading"];
+        int idarticles = articlesData["idarticles"] ;
+        String heading = articlesData["heading"] ?? 'empty';
         int division_id = articlesData["division_id"];
         int department_id = articlesData["department_id"];
-        String details = articlesData["details"];
-        String author = articlesData["author"];
-        int category_id = articlesData["category_id"];
-        String date = articlesData["date"];
-        int likes = articlesData["likes"];
-        String image = articlesData["image"];
+        String details = articlesData["details"] ?? 'empty';
+        String author = articlesData["author"] ?? 'empty';
+        int categoryId = articlesData["category_id"];
+        String date = articlesData["date"] ?? 'empty';
+        int likes = articlesData["aurthor_id"];
+        String image = articlesData["image"] ?? 'empty';
+        String profilePic = articlesData["profile_pic"] ?? 'empty';
 
         Articles article = Articles(
             idarticles,
@@ -228,28 +235,33 @@ class _FaouritesState extends State<Faourites> {
             department_id,
             details,
             author,
-            category_id,
+            categoryId,
             date,
             likes,
-            image);
-        Future<String>? retrievedName =
-        await getDepartmentNameById(article.department_id);
+            image,
+            profilePic);
+        // Future<String>? retrievedName =
+        // await getDepartmentNameById(article.department_id);
 
-        if ((retrievedName != null && await retrievedName == group)) {
-          setState(() {
-            articlesList.add(article);
-          });
-          if (kDebugMode) {
-            print('Added article id: ${article.idarticles}');
-          }
-        }
+        // if ((retrievedName != null && group == await retrievedName)) {
+        //   setState(() {
+        //     list.add(article);
+        //   });
+        //   if (kDebugMode) {
+        //     print('Added article id: ${article.idarticles}');
+        //   }
+        // }
+        print("--------------adding article : $article -----------------");
+        setState(() {
+          list.add(article);
+        });
 
         if (kDebugMode) {
           print('Object name: ${article.idarticles}');
         }
       }
 
-      return articlesList;
+      return list;
     } catch (error) {
       if (kDebugMode) {
         print(error);
@@ -259,9 +271,7 @@ class _FaouritesState extends State<Faourites> {
   }
 
 
-  // bool isArticleFavorite(Article article) {
-  //   return article.favorites.contains(currentUserEmail);
-  // }
+
 
   @override
   Widget build(BuildContext context) {
@@ -296,7 +306,7 @@ class _FaouritesState extends State<Faourites> {
                       onPressed: () async {
                         setState(() {
                           activeGroup = group.Name;
-                          this.group = group.Name;
+
                           getArticles().then((articles) {
                             setState(() {
                               articlesList = articles;
@@ -389,7 +399,7 @@ class _FaouritesState extends State<Faourites> {
                                       child: IconButton(
                                         onPressed: () async {
                                           int userid = await getUserId();
-                                          print("user id:/${userid}");
+                                          print("user id:/$userid");
                                           deleteFavourites(article.idarticles);
                                         },
                                         icon: Icon(Icons.favorite_border),

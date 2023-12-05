@@ -3,7 +3,6 @@ import 'package:dtsa/utils/settings.dart';
 import 'package:dtsa/widgets/bottomNavigationBar.dart';
 import 'package:dtsa/widgets/sideebar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -59,7 +58,7 @@ class _ArticleState extends State<Article> {
               Container(
                 padding: EdgeInsets.all(16.0),
                 child: Text(
-                  article.heading ?? 'heading',
+                  article.heading,
                   style: const TextStyle(
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
@@ -70,17 +69,19 @@ class _ArticleState extends State<Article> {
                 Row(
                   children: [
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(50.0),
+                      borderRadius: BorderRadius.circular(100.0), // Increased the border radius for a more rounded effect
                       child: Container(
                         width: 20.0,
                         height: 20.0,
                         margin: EdgeInsets.all(16.0),
                         color: Colors.white,
-                        // You can replace the placeholder image with your own image
-                         child: Image.asset('images/michael-dam-258165-unsplash.png',
-                           fit: BoxFit.cover,),
+                        child: Image.network(
+                          '$apiUrl/uploads/profiles/${article.profile_pic}' ?? '',
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
+
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -95,11 +96,13 @@ class _ArticleState extends State<Article> {
 
                           ),
                           Text(
-                            article.date ?? 'date',
-                            style: const TextStyle(fontSize: 12.0,
-                              color: Colors.grey
+                            (article.date).substring(0, 10),
+                            style: const TextStyle(
+                              fontSize: 12.0,
+                              color: Colors.grey,
                             ),
                           ),
+
                         ],
                       ),
                     ),

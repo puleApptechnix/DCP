@@ -10,6 +10,7 @@ class Articles{
   late String _date;
   late int _likes;
   late String _image;
+  late String profile_pic;
 
   Articles(
       this._idarticles,
@@ -21,7 +22,7 @@ class Articles{
       this._category_id,
       this._date,
       this._likes,
-      this._image);
+      this._image,this.profile_pic);
 
   String get image => _image;
 
